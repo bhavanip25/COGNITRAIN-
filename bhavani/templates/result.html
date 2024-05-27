@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Result</h1>
+        <div class="result">
+            <p><strong>Feedback:</strong> {{ feedback }}</p>
+            <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+            <p><strong>Rating:</strong> {{ rating }}</p>
+            <!-- Add emoji based on sentiment -->
+            {% if sentiment == 'Positive' %}
+            <p>😊 Happy</p>
+            <p style="text-align: center;font-size: x-large;">Great</p>
+            {% elif sentiment == 'Neutral' %}
+            <p>😐 Neutral</p>
+            <p style="text-align: center;font-size: x-large;">We will improve more.</p>
+            {% elif sentiment == 'Negative' %}
+            <p>😞 Sad</p>
+            <p style="text-align: center;font-size: x-large;">We will improve more.</p>
+            {% endif %}
+        </div>
+    </div>
+    <p style="text-align: center; font-size: xx-large;">Thank you for your valuable feedback <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtUg0LWicpIw1M8PIqtoKH4RIde0lTATKaPohZ7hnP-Q&s" alt="Thank you emoji" width="100" height="100">
+    </p>
+    
+    
+</body>
+</html>

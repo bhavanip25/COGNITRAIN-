@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #101010;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.header h1 {
+    color: #e74c3c;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #888;
+    font-size: 18px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ai-display {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.ai-eye {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 5px;
+    animation: blink 2s infinite;
+}
+
+.ai-brain {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #e74c3c, #c0392b);
+    border-radius: 50%;
+    margin-top: 10px;
+    animation: rotate 4s infinite linear;
+}
+
+@keyframes blink {
+    0%, 100% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ai-info {
+    text-align: left;
+}
+
+.ai-info h2 {
+    color: #e74c3c;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.ai-info p {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.ai-info a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}

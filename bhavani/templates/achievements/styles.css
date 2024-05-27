@@ -1,0 +1,70 @@
+/* Style the header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the main section */
+main {
+    padding: 20px;
+}
+
+/* Style the achievements section */
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Style the achievement cards */
+.achievement {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the achievement titles */
+.achievement h3 {
+    color: #4CAF50;
+}
+
+/* Style the achievement images */
+.achievement img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Style the footer */
+/* Style the footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px; /* Decrease padding for a smaller footer */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px; /* Decrease font size for smaller text */
+}
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.image-container img {
+    width: 200px; /* Set a fixed width for all images */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+

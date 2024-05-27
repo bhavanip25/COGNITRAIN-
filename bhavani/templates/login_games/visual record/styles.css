@@ -1,0 +1,87 @@
+/* CSS for Visual Recognition Quiz */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #007acc;
+}
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.question p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.question img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.option {
+    width: 150px;
+    height: 50px;
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #004f80;
+}
+
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+#next-button {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* CSS for Restart Quiz Button */
+
+/* Add styles for the Restart Quiz button */
+#restart-button {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+#restart-button:hover {
+    background-color: #004f80;
+}
+

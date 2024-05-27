@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:40vh;
+    margin-top:70px;
+    background-color:rgb(244, 239, 214);
+    position: relative;
+}
+
+.score-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0e0c0c;
+    color: #d51d1d;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.game-container {
+    text-align: center;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.red {
+    background-color: #ff5733;
+}
+
+.blue {
+    background-color: #338fff;
+}
+
+.green {
+    background-color: #33ff57;
+}
+
+.yellow {
+    background-color: #ffee33;
+}
+
+.score {
+    font-size: 24px;
+}

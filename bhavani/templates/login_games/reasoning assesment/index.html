@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reasoning Assessment</title>
+</head>
+<body>
+    <header>
+        <h1>Reasoning Assessment</h1>
+    </header>
+    <main>
+        <div id="instructions">
+            <h2>Instructions:</h2>
+            <p>Welcome to the Reasoning Assessment game! Here's how to play:</p>
+            <ol>
+                <li>Select a difficulty level: Easy, Medium, or Hard.</li>
+                <li>You will be presented with a series of multiple-choice questions.</li>
+                <li>Each question has a time limit. Answer within the time to earn points.</li>
+                <li>Click the "Next" button to move to the next question.</li>
+                <li>After completing the level, you'll see your score and receive feedback.</li>
+            </ol>
+        </div>
+        <div id="level-selection">
+            <h2>Select Level:</h2>
+            <button id="easy-level">Easy</button>
+            <button id="medium-level">Medium</button>
+            <button id="hard-level">Hard</button>
+        </div>
+        <div id="question-container" style="display: none;">
+            <p class="timer">Time Left: <span id="timer-count">10</span> seconds</p>
+            <p id="question-text"></p>
+            <div class="options">
+                <label><input type="radio" name="answer" value="A" id="option-A"> <span id="optionA"></span></label>
+                <label><input type="radio" name="answer" value="B" id="option-B"> <span id="optionB"></span></label>
+                <label><input type="radio" name="answer" value="C" id="option-C"> <span id="optionC"></span></label>
+            </div>
+            <button id="next">Next</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <p id="score"><span id="score-value"></span></p>
+            <p id="feedback"></p>
+            <button id="return-to-level-selection">Return to Level Selection</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

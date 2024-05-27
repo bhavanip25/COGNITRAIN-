@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive Training Programs</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+   
+
+    <nav class="bg-blue-500 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold text-white">Cognitive Training Programs</h1>
+            <div class="navbar-buttons">
+                <a href="http://127.0.0.1:5001" class="navbar-button">Doctor Appointment</a> 
+                <a href="http://127.0.0.1:5002" class="navbar-button">Feedback</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <h1 class="text-2xl font-bold mb-4 text-center">Cognitive Training Programs</h1>
+        <!-- Container for displaying programs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <!-- Program cards will be dynamically added here -->
+        </div>
+
+        <!-- Script to interact with cognitive training service -->
+        <script>
+            // Define classes for Cognitive Training Service and Program
+            class CognitiveTrainingProgram {
+                constructor(name, description, duration, link) {
+                    this.name = name;
+                    this.description = description;
+                    this.duration = duration;
+                    this.link = link;
+                }
+
+                displayDetails() {
+                    return `
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <a href="${this.link}" class="block text-xl font-bold text-blue-500">${this.name}</a>
+                            <p class="text-gray-700">${this.description}</p>
+                            <p class="text-red-500">Duration: ${this.duration} weeks</p>
+                        </div>
+                    `;
+                }
+            }
+
+            // Sample training programs with separate links
+            const programs = [
+                new CognitiveTrainingProgram(
+                    "Memory Boost",
+                    "Improve memory retention and recall",
+                    6,
+"file:///C:/Users/Sasi%20Kalyan/Desktop/bhavani/templates/login_games/memory%20games/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Attention Mastery",
+                    "Enhance focus and concentration skills",
+                    4,
+"file:///C:/Users/Sasi%20Kalyan/Desktop/bhavani/templates/login_games/Attention%20games/index.html"                ),
+                new CognitiveTrainingProgram(
+                    "Problem-Solving Pro",
+                    "Develop effective problem-solving strategies",
+                    8,
+"file:///C:/Users/Sasi%20Kalyan/Desktop/bhavani/templates/login_games/problem%20sloving/index.html"                ),
+                new CognitiveTrainingProgram(
+                    "Audio Reasoning",
+                    "Engage in a comprehensive reasoning assessment to evaluate and enhance your critical thinking abilities",
+                    8,
+"file:///C:/Users/Sasi%20Kalyan/Desktop/bhavani/templates/login_games/reasoning%20assesment/index.html"                ),
+                new CognitiveTrainingProgram(
+                    "Visual Record",
+                    "Develop visual recognition skills through interactive challenges and activitiess",
+                    8,
+"file:///C:/Users/Sasi%20Kalyan/Desktop/bhavani/templates/login_games/visual%20record/index.html"                ),
+        
+                // Add more programs here if needed
+            ];
+
+            // Get container element for displaying programs
+            const programContainer = document.querySelector('.grid');
+
+            // Display all programs
+            programs.forEach(program => {
+                const programDetails = program.displayDetails();
+                programContainer.innerHTML += programDetails;
+            });
+        </script>
+    </div>
+</body>
+</html>

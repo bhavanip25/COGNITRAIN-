@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitive Training Programs</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c2d2f1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .program-card {
+            background-color: #edeabd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .program-name {
+            font-weight: bold;
+            color: #040404;
+            text-decoration: none;
+        }
+
+        .program-description {
+            color: #101112;
+            margin-top: 8px;
+        }
+
+        .program-duration {
+            color: #ea1212;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            background-color: #3182ce;
+            color: #ffffff;
+        }
+
+        .navbar-buttons {
+            display: flex;
+            gap: 16px;
+            margin-left: auto; /* Align to the right */
+        }
+
+        .navbar-button {
+            padding: 8px 16px;
+            border-radius: 4px;
+            background-color: #ffffff;
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar-button:hover {
+            background-color: #e2e8f0;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1 class="text-2xl font-bold mb-4 text-center">Cognitive Training Programs</h1>
+       
+        <!-- Container for displaying programs -->
+        <div class="program-grid">
+            <!-- JavaScript will populate this area with program cards -->
+        </div>
+        <nav>
+            <div class="navbar-buttons">
+                <a href="#" class="navbar-button">Feedback</a>
+                <a href="http://127.0.0.1:5000" class="navbar-button">Doctor Appointment</a>
+            </div>
+        </nav>
+
+        <!-- Script to interact with cognitive training service -->
+        <script>
+            
+            // Define classes for Cognitive Training Service and Program
+            class CognitiveTrainingProgram {
+                constructor(name, description, duration, link) {
+                    this.name = name;
+                    this.description = description;
+                    this.duration = duration;
+                    this.link = link;
+                }
+
+                displayDetails() {
+                    return `
+                        <div class="program-card">
+                            <a href="${this.link}" class="program-name">${this.name}</a>
+                            <p class="program-description">${this.description}</p>
+                            <p class="program-duration">Duration: ${this.duration} weeks</p>
+                        </div>
+                    `;
+                }
+            }
+
+            // Sample training programs with separate links
+            const programs = [
+                new CognitiveTrainingProgram(
+                    "Memory Boost",
+                    "Improve memory retention and recall",
+                    6,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Memory_game/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Attention Mastery",
+                    "Enhance focus and concentration skills",
+                    4,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Attention%20game/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Problem-Solving Pro",
+                    "Develop effective problem-solving strategies",
+                    8,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Productivity%20challenge/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Guess the Number",
+                    "Improve numeracy skills by guessing numbers",
+                    8,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/numeracy/guess%20the%20number/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Maths Quiz",
+                    "Enhance math skills with interactive quizzes,enable your brain efficiency",
+                    8,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/numeracy/maths_quiz/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Pattern Matching",
+                    "Challenge your mind with a captivating pattern matching game, where you identify and predict sequences to enhance cognitive skills",
+                    5,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Pattern%20Matching/Game/Pattern%20Character/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Pattern Matching Symbols",
+                    "Challenge your mind with a captivating pattern matching, where you identify and predict sequences to enhance cognitive skills",
+                    5,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Pattern%20Matching/Game/Pattern%20Sym/index.html"
+                ),
+                new CognitiveTrainingProgram(
+                    "Reasoning Assessment",
+                    "Engage in a comprehensive reasoning assessment to evaluate and enhance your critical thinking abilities.",
+                    5,
+"file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Reasoning%20assessment/index.html"
+                    ),
+                    new CognitiveTrainingProgram(
+                    "Visual Recognition",
+                    "Develop visual recognition skills through interactive challenges and activities.",
+                    5,
+                    "file:///C:/Users/DELL/OneDrive/Desktop/CogniCare-main/SIH/Visual%20Recog/index.html"
+                    )
+
+
+
+            ];
+
+            // Get container element for displaying programs
+            const programGrid = document.querySelector('.program-grid');
+
+            // Display all programs
+            programs.forEach(program => {
+                const programDetails = program.displayDetails();
+                programGrid.innerHTML += programDetails;
+            });
+            
+        </script>
+    </div>
+</body>
+
+</html>

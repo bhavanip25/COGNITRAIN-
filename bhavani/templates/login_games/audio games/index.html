@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cognitive Retraining Program</title>
+    <style>
+
+/* Latest CSS Styles with Black Background, Blue Buttons, and Centered Content */
+/* CSS Styles with Equal-Sized Blocks */
+/* CSS Styles with Equal-Sized Blocks */
+/* CSS Styles with Equal-Sized Blocks and Margin at the Top */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #000; /* Black header background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.exercise {
+    width: 300px; /* Set a fixed width for all exercises */
+    height: 300px; /* Set a fixed height for all exercises */
+    margin: 20px auto 0; /* Top margin added, centered horizontally */
+    padding: 20px;
+    border: 1px solid #007acc; /* Blue border */
+    border-radius: 5px;
+    background-color: rgba(0, 122, 204, 0.3); /* Semi-transparent blue background */
+}
+
+.audio-container {
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px; /* Larger font size for the main title */
+    margin-top: 0; /* Remove default top margin */
+    padding: 10px 0; /* Add some padding for spacing */
+    background-color: #007acc; /* Blue background color */
+    display: inline-block; /* Place the title in a box */
+    border-radius: 5px; /* Rounded corners for the box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+button {
+    background-color: #007acc; /* Blue button background */
+    color: #fff; /* White button text color */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #005b9f; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Auditory Analysis of sounds</h1>
+    <div id="container">
+      <p>Complete the following cognitive exercises to improve your skills:</p>
+      <div class="exercise">
+        <h3> Audio Game 1</h3>
+        <p>Listen to the audio and identify the animal:</p>
+        <div class="audio-game">
+          <audio controls>
+            <source src="lion.mp3" type="audio/mpeg" />
+          
+          </audio>
+          <input
+            type="text"
+            id="audio-answer1"
+            placeholder="Enter your answer"
+          />
+          <button onclick="checkAudioGame1()">Check</button>
+        </div>
+      </div>
+
+      <!-- Exercise 3: Audio Game 2 -->
+      <div class="exercise">
+        <h3> Audio Game 2</h3>
+        <p>Listen to the audio and identify the musical instrument:</p>
+        <div class="audio-game">
+          <audio controls>
+            <source src="guitar.mp3" type="audio/mpeg" />
+           
+          </audio>
+          <input
+            type="text"
+            id="audio-answer2"
+            placeholder="Enter your answer"
+          />
+          <button onclick="checkAudioGame2()">Check</button>
+        </div>
+      </div>
+
+      <!-- Exercise 4: Audio Game 3 -->
+      <div class="exercise">
+        <h3> Audio Game 3</h3>
+        <p>Listen to the audio and identify the nature sound:</p>
+        <div class="audio-game">
+          <audio controls>
+            <source src="birds.mp3" type="audio/mpeg" />
+           
+          </audio>
+          <input
+            type="text"
+            id="audio-answer3"
+            placeholder="Enter your answer"
+          />
+          <button onclick="checkAudioGame3()">Check</button>
+        </div>
+      </div>
+
+      <!-- Exercise 8: Audio Game 4 -->
+      <div class="exercise">
+        <h3>Audio Game 4</h3>
+        <p>Listen to the audio and identify the vehicle sound:</p>
+        <div class="audio-game">
+          <audio controls>
+            <source src="car_horn.mp3" type="audio/mpeg" />
+           
+          </audio>
+          <input
+            type="text"
+            id="audio-answer4"
+            placeholder="Enter your answer"
+          />
+          <button onclick="checkAudioGame4()">Check</button>
+        </div>
+      </div>
+
+      <!-- Exercise 10: Audio Game 6 (Waterfall Sound) -->
+      <div class="exercise">
+        <h3>Audio Game 5</h3>
+        <p>Listen to the sound and identify it:</p>
+        <div class="audio-game">
+          <audio controls>
+            <source src="waterfall.mp3" type="audio/mpeg" />
+          
+          </audio>
+          <input
+            type="text"
+            id="audio-answer6"
+            placeholder="Enter your answer"
+          />
+          <button onclick="checkAudioGame6()">Check</button>
+        </div>
+      </div>
+      </div>
+
+
+    <script>
+      // Add your JavaScript code here to implement the exercises and their logic
+
+     
+
+      function checkAudioGame1() {
+        const audioAnswer1 = document
+          .getElementById("audio-answer1")
+          .value.toLowerCase();
+
+        if (audioAnswer1 === "lion") {
+          alert("Correct answer!");
+        } else {
+          alert("Incorrect answer. Try again.");
+        }
+      }
+
+      // Audio Game 2 Answer
+      function checkAudioGame2() {
+        const audioAnswer2 = document
+          .getElementById("audio-answer2")
+          .value.toLowerCase();
+
+        if (audioAnswer2 === "guitar") {
+          alert("Correct answer!");
+        } else {
+          alert("Incorrect answer. Try again.");
+        }
+      }
+
+      // Audio Game 3 Answer
+      function checkAudioGame3() {
+        const audioAnswer3 = document
+          .getElementById("audio-answer3")
+          .value.toLowerCase();
+
+        if (audioAnswer3 === "birds") {
+          alert("Correct answer!");
+        } else {
+          alert("Incorrect answer. Try again.");
+        }
+      }
+
+      function checkAudioGame4() {
+        const audioAnswer4 = document
+          .getElementById("audio-answer4")
+          .value.toLowerCase();
+
+        if (audioAnswer4 === "car horn") {
+          alert("Correct answer!");
+        } else {
+          alert("Incorrect answer. Try again.");
+        }
+      }
+
+      function checkAudioGame6() {
+        const audioAnswer6 = document
+          .getElementById("audio-answer6")
+          .value.toLowerCase();
+
+        if (audioAnswer6 === "waterfall") {
+          alert("Correct answer!");
+        } else {
+          alert("Incorrect answer. Try again.");
+        }
+      }
+
+    //   function checkLanguageGame() {
+    //     const languageAnswer1 = document
+    //       .getElementById("language-answer1")
+    //       .value.toLowerCase();
+    //     const languageAnswer2 = document
+    //       .getElementById("language-answer2")
+    //       .value.toLowerCase();
+    //     const languageAnswer3 = document
+    //       .getElementById("language-answer3")
+    //       .value.toLowerCase();
+
+    //     if (
+    //       languageAnswer1 === "sits" &&
+    //       languageAnswer2 === "read" &&
+    //       languageAnswer3 === "went"
+    //     ) {
+    //       alert("Correct answers!");
+    //     } else {
+    //       alert("Incorrect answers. Try again.");
+    //     }
+    //   }
+
+     
+    </script>
+  </body>
+</html>
